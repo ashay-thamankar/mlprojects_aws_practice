@@ -37,7 +37,7 @@ def predict_datapoint():
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
 
-        return render_template('home.html', results= round(results[0],2))
+        return render_template('home.html', results= round(results[0],3))
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port= 8080)
